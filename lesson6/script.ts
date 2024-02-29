@@ -1,6 +1,6 @@
-let name2:string="Eric và \"typescript\" ";
-let name3:string='Eric và "typescript" ';
+let name6:string="Eric và \"typescript\" ";
+let name7:string='Eric và "typescript" ';
 
-let name4:string ="Eric";
-console.log(`check name = ${name2}`);
-console.log(`check name 3 = ${name3}`);
+let name8:string ="Eric";
+console.log(`check name = ${name6}`);
+console.log(`check name 3 = ${name7}`);
