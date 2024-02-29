@@ -1,0 +1,8 @@
+enum API_STATUS {
+    PENDDING="Mai",
+    FULFILLED="Duc",
+    REJECTED="Duong"
+}
+let a1 = API_STATUS.FULFILLED;
+let a2 = API_STATUS.PENDDING;
+console.log(`a1 =${API_STATUS.FULFILLED} \na2 =${API_STATUS.PENDDING}`);
