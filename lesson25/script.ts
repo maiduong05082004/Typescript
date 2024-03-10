@@ -1,3 +1,3 @@
-let sum3=(a:number,b:number):number=> {
+let sum4=(a:number,b:number):number=> {
     return a+b;
 }
