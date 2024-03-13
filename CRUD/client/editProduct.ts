@@ -1,9 +1,9 @@
-const getInfoProduct = async() => {
+const getInfoProduct = async () => {
     const param = new URLSearchParams(location.search);
     const productId = param.get("id");
 
     const response = await fetch('http://localhost:3000/product');
-    const products =  await response.json();
+    const products = await response.json();
     const product = products.find(product => product.id === productId);
     // console.log(product);
     //đổ dữ liệu vào thẻ input
@@ -13,7 +13,7 @@ const getInfoProduct = async() => {
 };
 getInfoProduct();
 
-const updateProduct = (event:any) =>{
+const updateProduct = (event: any) => {
     event.preventDefault();
     const id: any = document.querySelector('input[name="id"]');
     const name: any = document.querySelector('input[name="name"]');
@@ -21,10 +21,10 @@ const updateProduct = (event:any) =>{
     const ProductEdit: any = ({
         id: id.value,
         name: name.value,
-        price: price.value 
+        price: price.value
     });
     alert("Sửa sản phẩm thành công");
-    window.location.href='list_product.html';
+    window.location.href = 'list_product.html';
     fetch(`http://localhost:3000/product/${id.value}`, {
         method: "PUT",
         headers: {
@@ -32,5 +32,5 @@ const updateProduct = (event:any) =>{
         },
         body: JSON.stringify(ProductEdit)
     });
-    
+
 }
