@@ -4,12 +4,19 @@ const getInfoProduct = async () => {
 
     const response = await fetch('http://localhost:3000/product');
     const products = await response.json();
-    const product = products.find(product => product.id === productId);
+    const product = products.find((product:any) => product.id === productId);
+    
     // console.log(product);
     //đổ dữ liệu vào thẻ input
-    document.querySelector('input[name="id"]').value = product.id;
-    document.querySelector('input[name="name"]').value = product.name;
-    document.querySelector('input[name="price"]').value = product.price;
+    const id = document.getElementById('id') as HTMLInputElement;
+    const name = document.getElementById('name') as HTMLInputElement;
+    const price = document.getElementById('price') as HTMLInputElement;
+    if(id && name && price){
+        id.value = product.id
+        name.value = product.name
+        price.value = product.price
+    }
+   
 };
 getInfoProduct();
 
